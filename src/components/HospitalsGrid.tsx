@@ -1,5 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Users, Award, Building } from "lucide-react";
+import johnsHopkins from "@/assets/johns-hopkins-hospital.jpg";
+import mayoClinic from "@/assets/mayo-clinic.jpg";
+import clevelandClinic from "@/assets/cleveland-clinic.jpg";
+import massGeneral from "@/assets/mass-general.jpg";
+import uclamedical from "@/assets/ucla-medical.jpg";
+import nyuLangone from "@/assets/nyu-langone.jpg";
+import stanfordMedical from "@/assets/stanford-medical.jpg";
+import mountSinai from "@/assets/mount-sinai.jpg";
 
 const HospitalsGrid = () => {
   const hospitals = [
@@ -8,7 +16,7 @@ const HospitalsGrid = () => {
       location: "Baltimore, MD",
       students: "45+ Students",
       specialties: ["Internal Medicine", "Surgery", "Emergency Medicine"],
-      image: "/api/placeholder/300/200",
+      image: johnsHopkins,
       tier: "Top Tier"
     },
     {
@@ -16,7 +24,7 @@ const HospitalsGrid = () => {
       location: "Rochester, MN",
       students: "38+ Students", 
       specialties: ["Cardiology", "Oncology", "Neurology"],
-      image: "/api/placeholder/300/200",
+      image: mayoClinic,
       tier: "Premier"
     },
     {
@@ -24,7 +32,7 @@ const HospitalsGrid = () => {
       location: "Cleveland, OH",
       students: "52+ Students",
       specialties: ["Cardiology", "Orthopedics", "Urology"],
-      image: "/api/placeholder/300/200",
+      image: clevelandClinic,
       tier: "Top Tier"
     },
     {
@@ -32,7 +40,7 @@ const HospitalsGrid = () => {
       location: "Boston, MA", 
       students: "41+ Students",
       specialties: ["Radiology", "Psychiatry", "Dermatology"],
-      image: "/api/placeholder/300/200",
+      image: massGeneral,
       tier: "Premier"
     },
     {
@@ -40,7 +48,7 @@ const HospitalsGrid = () => {
       location: "Los Angeles, CA",
       students: "47+ Students",
       specialties: ["Pediatrics", "Orthopedics", "Neurosurgery"],
-      image: "/api/placeholder/300/200",
+      image: uclamedical,
       tier: "Top Tier"
     },
     {
@@ -48,7 +56,7 @@ const HospitalsGrid = () => {
       location: "New York, NY",
       students: "39+ Students",
       specialties: ["Family Medicine", "Internal Medicine", "Surgery"],
-      image: "/api/placeholder/300/200",
+      image: nyuLangone,
       tier: "Premier"
     },
     {
@@ -56,7 +64,7 @@ const HospitalsGrid = () => {
       location: "Stanford, CA",
       students: "35+ Students",
       specialties: ["Psychiatry", "Radiology", "Emergency Medicine"],
-      image: "/api/placeholder/300/200",
+      image: stanfordMedical,
       tier: "Elite"
     },
     {
@@ -64,7 +72,7 @@ const HospitalsGrid = () => {
       location: "New York, NY",
       students: "44+ Students",
       specialties: ["Dermatology", "Cardiology", "Oncology"],
-      image: "/api/placeholder/300/200",
+      image: mountSinai,
       tier: "Top Tier"
     }
   ];
