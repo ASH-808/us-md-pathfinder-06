@@ -62,13 +62,13 @@ const DetailedTimeline = () => {
   ];
 
   return (
-    <section className="py-20 bg-accent-gradient">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+    <section className="py-12 sm:py-16 lg:py-20 bg-accent-gradient">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
             Medico International MBBS-MD U.S. Pathway Timeline
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             A detailed roadmap showing every step of your journey from pre-med to practicing physician in the United States
           </p>
         </div>
@@ -84,24 +84,24 @@ const DetailedTimeline = () => {
               const isEven = index % 2 === 0;
               
               return (
-                <div key={index} className={`relative mb-16 lg:mb-24 ${isEven ? 'lg:text-right' : 'lg:text-left'}`}>
+                <div key={index} className={`relative mb-12 sm:mb-16 lg:mb-24 ${isEven ? 'lg:text-right' : 'lg:text-left'}`}>
                   {/* Timeline node */}
-                  <div className="absolute left-1/2 top-8 w-16 h-16 transform -translate-x-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center rounded-full bg-background border-4 border-primary shadow-lg z-10">
-                    <IconComponent className="h-8 w-8 text-primary" />
+                  <div className="absolute left-1/2 top-8 w-12 h-12 sm:w-16 sm:h-16 transform -translate-x-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center rounded-full bg-background border-4 border-primary shadow-lg z-10">
+                    <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
                   </div>
 
                   {/* Content card */}
                   <div className={`lg:w-5/12 ${isEven ? 'lg:ml-auto lg:pr-16' : 'lg:pl-16'}`}>
                     <Card className="bg-card border-border shadow-lg transition-smooth hover:shadow-xl">
-                      <CardContent className="p-8">
+                      <CardContent className="p-4 sm:p-6 lg:p-8">
                         {/* Mobile icon */}
-                        <div className="flex items-center mb-6 lg:hidden">
-                          <div className={`p-3 rounded-full ${step.lightColor} mr-4`}>
-                            <IconComponent className={`h-6 w-6 ${step.color.replace('bg-', 'text-')}`} />
+                        <div className="flex items-center mb-4 sm:mb-6 lg:hidden">
+                          <div className={`p-2 sm:p-3 rounded-full ${step.lightColor} mr-3 sm:mr-4`}>
+                            <IconComponent className={`h-5 w-5 sm:h-6 sm:w-6 ${step.color.replace('bg-', 'text-')}`} />
                           </div>
                           <div>
-                            <div className="text-sm font-semibold text-primary">Phase {index + 1}</div>
-                            <div className="text-2xl font-bold text-card-foreground">{step.phase}</div>
+                            <div className="text-xs sm:text-sm font-semibold text-primary">Phase {index + 1}</div>
+                            <div className="text-lg sm:text-2xl font-bold text-card-foreground">{step.phase}</div>
                           </div>
                         </div>
 
@@ -112,17 +112,17 @@ const DetailedTimeline = () => {
                         </div>
 
                         {/* Duration badge */}
-                        <div className="inline-flex items-center mb-6">
-                          <Clock className="h-4 w-4 text-primary mr-2" />
-                          <span className="font-semibold text-primary">{step.duration}</span>
+                        <div className="inline-flex items-center mb-4 sm:mb-6">
+                          <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-primary mr-2" />
+                          <span className="font-semibold text-primary text-sm sm:text-base">{step.duration}</span>
                         </div>
 
                         {/* Details list */}
-                        <ul className="space-y-3">
+                        <ul className="space-y-2 sm:space-y-3">
                           {step.details.map((detail, detailIndex) => (
                             <li key={detailIndex} className="flex items-start">
-                              <div className="w-2 h-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
-                              <span className="text-muted-foreground text-sm leading-relaxed">{detail}</span>
+                              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></div>
+                              <span className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{detail}</span>
                             </li>
                           ))}
                         </ul>
@@ -135,15 +135,15 @@ const DetailedTimeline = () => {
           </div>
 
           {/* Summary stats */}
-          <div className="mt-20">
+          <div className="mt-12 sm:mt-16 lg:mt-20">
             <Card className="bg-primary text-white shadow-xl">
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">Complete Your Journey</h3>
-                  <p className="opacity-90">From NEET qualifier to U.S. licensed physician</p>
+              <CardContent className="p-6 sm:p-8">
+                <div className="text-center mb-6 sm:mb-8">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Complete Your Journey</h3>
+                  <p className="opacity-90 text-sm sm:text-base">From NEET qualifier to U.S. licensed physician</p>
                 </div>
                 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                   <div className="text-center">
                     <div className="text-3xl font-bold mb-2">7-8</div>
                     <div className="text-sm opacity-90">Total Years</div>
