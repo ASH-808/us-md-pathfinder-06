@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Medical Education Design System - Professional, Trustworthy, Inspiring */
+
+@layer base {
+  :root {
+    /* Medical Color Palette - Cyanosis Blue Primary */
+    --primary: 240 100% 55%;
+    --primary-foreground: 0 0% 99%;
+    --primary-light: 240 100% 85%;
+    --primary-dark: 240 100% 40%;
+    
+    /* Celeste Cyan Accent */
+    --accent-cyan: 191 85% 49%;
+    --accent-cyan-light: 191 85% 75%;
+    --accent-cyan-dark: 191 85% 35%;
+    
+    /* Success Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Leukocyte White & Professional Grays */
+    --background: 0 0% 99%;
+    --foreground: 240 25% 15%;
+    --card: 0 0% 99%;
+    --card-foreground: 240 25% 15%;
+    
+    /* Secondary Colors */
+    --secondary: 240 20% 96%;
+    --secondary-foreground: 240 25% 15%;
+    --muted: 240 20% 95%;
+    --muted-foreground: 240 16% 47%;
+    
+    /* Accent Colors */
+    --accent: 191 85% 94%;
+    --accent-foreground: 240 25% 15%;
+    
+    /* Border & Input */
+    --border: 240 20% 90%;
+    --input: 240 20% 90%;
+    --ring: 240 100% 55%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Popover */
+    --popover: 0 0% 99%;
+    --popover-foreground: 240 25% 15%;
+    
+    /* Medical Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 100% 55%) 0%, hsl(240 100% 40%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(191 85% 49%) 0%, hsl(191 85% 35%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 25%) 100%);
+    --gradient-medical: linear-gradient(135deg, hsl(240 100% 55%) 0%, hsl(191 85% 49%) 100%);
+    
+    /* Medical Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(240 100% 55% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(240 100% 55% / 0.1), 0 2px 4px -1px hsl(240 100% 55% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(240 100% 55% / 0.1), 0 4px 6px -2px hsl(240 100% 55% / 0.05);
+    --shadow-hero: 0 25px 50px -12px hsl(240 100% 55% / 0.25);
+    --shadow-cyan: 0 10px 30px -10px hsl(191 85% 49% / 0.3);
+    
+    /* Radius */
+    --radius: 0.75rem;
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 240 28% 6%;
+    --foreground: 0 0% 98%;
+    --card: 240 28% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 28% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 240 100% 65%;
+    --primary-foreground: 240 28% 6%;
+    --secondary: 240 28% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 28% 12%;
+    --muted-foreground: 240 20% 65%;
+    --accent: 191 85% 25%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 28% 15%;
+    --input: 240 28% 15%;
+    --ring: 240 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .accent-gradient {
+    background: var(--gradient-accent);
+  }
+  
+  .success-gradient {
+    background: var(--gradient-success);
+  }
+  
+  .shadow-hero {
+    box-shadow: var(--shadow-hero);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  .medical-gradient {
+    background: var(--gradient-medical);
+  }
+  
+  .cyan-gradient {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-cyan {
+    box-shadow: var(--shadow-cyan);
+  }
+  
+  /* Infinite Scroll Animations */
+  .scroll-left {
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  .scroll-right {
+    animation: scroll-right 35s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Pause animation on hover */
+  .scroll-container:hover .scroll-left,
+  .scroll-container:hover .scroll-right {
+    animation-play-state: paused;
+  }
+}
